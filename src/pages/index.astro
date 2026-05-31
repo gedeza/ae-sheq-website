@@ -200,11 +200,11 @@ const featuredClients = projectsData.clients.slice(0, 6);
     </section>
 
     <!-- CTA Section -->
-    <section class="section bg-primary-600 text-white">
+    <section class="cta-section section">
       <div class="container">
         <div class="max-w-3xl mx-auto text-center">
           <h2 class="heading-2 mb-4">Ready to Ensure Your Workplace Compliance?</h2>
-          <p class="text-lead mb-8 text-primary-100">
+          <p class="cta-text text-lead mb-8">
             Get a free consultation with our SHEQ experts. We'll help you identify risks, 
             ensure compliance, and create a safer work environment.
           </p>
@@ -212,7 +212,7 @@ const featuredClients = projectsData.clients.slice(0, 6);
             <Button href="/contact" variant="accent" size="lg">
               Get Free Consultation
             </Button>
-            <Button href={`tel:${contactData.contact.phone}`} variant="outline" size="lg" class="!border-white !text-white hover:!bg-white hover:!text-primary-600">
+            <Button href={`tel:${contactData.contact.phone}`} variant="outline" size="lg" class="cta-button-outline">
               Call {contactData.contact.phone}
             </Button>
           </div>
