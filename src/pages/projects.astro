@@ -25,14 +25,14 @@ const stats = projectsData.statistics;
     <section class="hero-section py-20">
       <div class="container">
         <div class="max-w-3xl">
-          <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
+          <div class="hero-badge inline-flex items-center px-4 py-2 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
             <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
               <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
             </svg>
             Our Portfolio
           </div>
-          <h1 class="heading-display mb-6">Projects & Success Stories</h1>
+          <h1 class="hero-heading heading-display mb-6">Projects & Success Stories</h1>
           <p class="hero-subheading text-lead">
             Delivering excellence across diverse industries. From major infrastructure projects to 
             comprehensive safety file development, we've helped organizations achieve full SHEQ compliance.
@@ -42,20 +42,20 @@ const stats = projectsData.statistics;
         <!-- Stats -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-white/20">
           <div class="text-center">
-            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.yearsExperience}</div>
-            <div class="text-sm text-neutral-300">Years Experience</div>
+            <div class="hero-stat-number text-4xl font-bold mb-2">{stats.yearsExperience}</div>
+            <div class="hero-stat-label text-sm">Years Experience</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.projectsCompleted}</div>
-            <div class="text-sm text-neutral-300">Projects Completed</div>
+            <div class="hero-stat-number text-4xl font-bold mb-2">{stats.projectsCompleted}</div>
+            <div class="hero-stat-label text-sm">Projects Completed</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.employeesManaged}</div>
-            <div class="text-sm text-neutral-300">Employees Managed</div>
+            <div class="hero-stat-number text-4xl font-bold mb-2">{stats.employeesManaged}</div>
+            <div class="hero-stat-label text-sm">Employees Managed</div>
           </div>
           <div class="text-center">
-            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.clientsSatisfied}</div>
-            <div class="text-sm text-neutral-300">Satisfied Clients</div>
+            <div class="hero-stat-number text-4xl font-bold mb-2">{stats.clientsSatisfied}</div>
+            <div class="hero-stat-label text-sm">Satisfied Clients</div>
           </div>
         </div>
       </div>
@@ -268,7 +268,7 @@ const stats = projectsData.statistics;
     <section class="cta-section section">
       <div class="container">
         <div class="max-w-3xl mx-auto text-center">
-          <h2 class="heading-2 mb-4">Start Your Next Project With Confidence</h2>
+          <h2 class="cta-heading heading-2 mb-4">Start Your Next Project With Confidence</h2>
           <p class="cta-text text-lead mb-8">
             Whether it's a major infrastructure project or comprehensive safety file development, 
             our experienced team is ready to ensure your success.
