@@ -21,7 +21,7 @@ const featuredClients = projectsData.clients.slice(0, 6);
   
   <main>
     <!-- Hero Section -->
-    <section class="relative bg-gradient-hero text-white overflow-hidden">
+    <section class="hero-section relative overflow-hidden">
       <!-- Background Pattern -->
       <div class="absolute inset-0 opacity-10">
         <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
@@ -30,20 +30,20 @@ const featuredClients = projectsData.clients.slice(0, 6);
       <div class="container relative py-20 md:py-32">
         <div class="max-w-4xl mx-auto text-center">
           <!-- Badge -->
-          <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 animate-fade-in">
-            <svg class="w-5 h-5 mr-2 text-secondary-400" fill="currentColor" viewBox="0 0 20 20">
+          <div class="hero-badge inline-flex items-center px-4 py-2 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 animate-fade-in">
+            <svg class="w-5 h-5 mr-2 hero-badge-icon" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
             </svg>
             OHS Act 85 of 1993 Compliant
           </div>
 
           <!-- Main Heading -->
-          <h1 class="heading-display mb-6 animate-slide-up">
-            Leading SHEQ Solutions for a <span class="text-secondary-400">Safer, Compliant</span> Workplace
+          <h1 class="hero-heading heading-display mb-6 animate-slide-up">
+            Leading SHEQ Solutions for a <span class="hero-accent">Safer, Compliant</span> Workplace
           </h1>
 
           <!-- Subheading -->
-          <p class="text-lead mb-8 text-neutral-200 max-w-3xl mx-auto animate-slide-up">
+          <p class="hero-subheading text-lead mb-8 max-w-3xl mx-auto animate-slide-up">
             Over 3 years of expertise in Safety, Health, Environment & Quality consulting. 
             Providing reliable and sustainable SHEQ solutions across South Africa.
           </p>
@@ -53,28 +53,28 @@ const featuredClients = projectsData.clients.slice(0, 6);
             <Button href="/contact" variant="accent" size="lg">
               Get Free Consultation
             </Button>
-            <Button href="/services" variant="outline" size="lg" class="!border-white !text-white hover:!bg-white hover:!text-primary-900">
+            <Button href="/services" variant="outline" size="lg" class="hero-button-outline">
               View Our Services
             </Button>
           </div>
 
           <!-- Stats -->
-          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/20">
+          <div class="hero-stats grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16">
             <div class="text-center">
-              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.yearsExperience}</div>
-              <div class="text-sm text-neutral-300">Years Experience</div>
+              <div class="hero-stat-number text-4xl font-bold mb-2">{stats.yearsExperience}</div>
+              <div class="hero-stat-label text-sm">Years Experience</div>
             </div>
             <div class="text-center">
-              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.projectsCompleted}</div>
-              <div class="text-sm text-neutral-300">Projects Completed</div>
+              <div class="hero-stat-number text-4xl font-bold mb-2">{stats.projectsCompleted}</div>
+              <div class="hero-stat-label text-sm">Projects Completed</div>
             </div>
             <div class="text-center">
-              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.employeesManaged}</div>
-              <div class="text-sm text-neutral-300">Employees Managed</div>
+              <div class="hero-stat-number text-4xl font-bold mb-2">{stats.employeesManaged}</div>
+              <div class="hero-stat-label text-sm">Employees Managed</div>
             </div>
             <div class="text-center">
-              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.clientsSatisfied}</div>
-              <div class="text-sm text-neutral-300">Satisfied Clients</div>
+              <div class="hero-stat-number text-4xl font-bold mb-2">{stats.clientsSatisfied}</div>
+              <div class="hero-stat-label text-sm">Satisfied Clients</div>
             </div>
           </div>
         </div>
