@@ -278,4 +278,34 @@
     color: var(--color-hero-text-muted);
     /* Light gray #e2e8f0 on dark blue = 9.8:1 - WCAG AAA */
   }
+
+  /* ============================================
+     CTA SECTION STYLES - Token-Based
+     Reuses hero section tokens for consistency
+     WCAG AA contrast verified
+     ============================================ */
+  .cta-section {
+    background: linear-gradient(135deg, var(--color-hero-bg-start) 0%, var(--color-hero-bg-end) 100%);
+    color: var(--color-hero-text);
+  }
+
+  .cta-heading {
+    color: var(--color-hero-text);
+    /* White #ffffff on dark blue = 12.63:1 - WCAG AAA */
+  }
+
+  .cta-text {
+    color: var(--color-hero-text-muted);
+    /* Light gray #e2e8f0 on dark blue = 9.8:1 - WCAG AAA */
+  }
+
+  .cta-button-outline {
+    border-color: var(--color-hero-text) !important;
+    color: var(--color-hero-text) !important;
+  }
+
+  .cta-button-outline:hover {
+    background-color: var(--color-hero-text) !important;
+    color: var(--color-hero-bg-start) !important;
+  }
 }
