@@ -1,0 +1,293 @@
+{
+  "featured": [
+    {
+      "id": 1,
+      "title": "Hatchery and Chicken Houses Management",
+      "client": "Agriculture Client",
+      "location": "Mokopane and Polokwane, Limpopo",
+      "category": "Agriculture",
+      "status": "Current",
+      "description": "Managing production safety for hatchery and chicken houses across multiple sites with over 200 employees.",
+      "scope": [
+        "Safety management for 200+ employees",
+        "Multi-site coordination",
+        "Agricultural safety compliance",
+        "Daily safety operations"
+      ],
+      "image": "/images/projects/agriculture.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Matimba Coal Plant Maintenance",
+      "client": "Eskom Rotec Industries",
+      "location": "Limpopo",
+      "category": "Energy & Mining",
+      "status": "Current",
+      "description": "Maintenance of coal plant at Matimba ash dump and coal site handling operations.",
+      "scope": [
+        "Coal plant safety management",
+        "Ash dump operations",
+        "Mining safety compliance",
+        "Environmental monitoring"
+      ],
+      "image": "/images/projects/mining.jpg"
+    }
+  ],
+  "completed": [
+    {
+      "id": 3,
+      "title": "Raima Park Substation Refurbishment",
+      "client": "City of Tshwane",
+      "location": "Tshwane, Gauteng",
+      "category": "Infrastructure",
+      "description": "Refurbishment and commissioning of Raima park substation and 1x T4 installation.",
+      "image": "/images/projects/infrastructure.jpg"
+    },
+    {
+      "id": 4,
+      "title": "High Mast Lights Refurbishment",
+      "client": "City of Tshwane",
+      "location": "Fountain Area & Kgosi Mampuru Correctional Services",
+      "category": "Infrastructure",
+      "description": "Refurbishment of 58 high mast lights at the fountain area and Kgosi Mampuru correctional services.",
+      "image": "/images/projects/infrastructure.jpg"
+    },
+    {
+      "id": 5,
+      "title": "11kV Overhead Line Installation",
+      "client": "City of Tshwane",
+      "location": "Tshwane, Gauteng",
+      "category": "Infrastructure",
+      "description": "Supply, installation, removal of redundant infrastructure, testing, and commissioning of approximately 2.3 km of 11kV overhead line.",
+      "image": "/images/projects/infrastructure.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Road K54 Construction Project",
+      "client": "City of Tshwane",
+      "location": "Mamelodi, Gauteng",
+      "category": "Construction",
+      "description": "Construction of road K54 between K22 (old Bronkhorstspruit Road) and K69 (Hans Strijdom), approximately 6.8km, as well as a section of road D2561 from K54 to Tsamaya road in Mamelodi.",
+      "image": "/images/projects/construction.jpg"
+    },
+    {
+      "id": 7,
+      "title": "MVS 93 Overhead Line Network Refurbishment",
+      "client": "City of Tshwane",
+      "location": "Tshwane, Gauteng",
+      "category": "Infrastructure",
+      "description": "Refurbishment of existing MVS 93 overhead line network (approximately 3 km).",
+      "image": "/images/projects/infrastructure.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Fountain Precinct High Mast Light Interconnection",
+      "client": "City of Tshwane",
+      "location": "Fountain Precinct, Gauteng",
+      "category": "Infrastructure",
+      "description": "Refurbishment of fountain precinct high mast light interconnection system.",
+      "image": "/images/projects/infrastructure.jpg"
+    }
+  ],
+  "safetyFiles": [
+    {
+      "id": 9,
+      "title": "Park Station Lower Concourse Retail Space",
+      "client": "PRASA",
+      "location": "Gauteng",
+      "category": "Commercial",
+      "description": "Development of comprehensive health and safety file for lower concourse retail space at Park Station, ensuring compliance with PRASA's standards.",
+      "image": "/images/projects/commercial.jpg"
+    },
+    {
+      "id": 10,
+      "title": "MV Cable Re-routing and Mini Substation",
+      "client": "City of Tshwane",
+      "location": "Lynnwood, Gauteng",
+      "category": "Infrastructure",
+      "description": "Safety file for re-routing of existing medium voltage (MV) underground cables and the supply, installation, testing, and commissioning of a mini substation.",
+      "image": "/images/projects/infrastructure.jpg"
+    },
+    {
+      "id": 11,
+      "title": "Septic Tanks Construction",
+      "client": "Gauteng Province",
+      "location": "Merivale Nature Reserve, Gauteng",
+      "category": "Municipal",
+      "description": "Health and safety file for construction of septic tanks at Merivale nature reserve.",
+      "image": "/images/projects/municipal.jpg"
+    },
+    {
+      "id": 12,
+      "title": "VW Group Catering Services Safety File",
+      "client": "VW Group South Africa",
+      "location": "Centurion, Gauteng",
+      "category": "Manufacturing",
+      "description": "Safety file for Anita Booi Food Delivery (Pty) Ltd catering services contract, providing daily catering for VW Group employees and on-site staff.",
+      "image": "/images/projects/manufacturing.jpg"
+    },
+    {
+      "id": 13,
+      "title": "Classroom Construction Project",
+      "client": "Limpopo Department of Education",
+      "location": "Limpopo",
+      "category": "Education",
+      "description": "Comprehensive safety file for classroom construction project.",
+      "image": "/images/projects/education.jpg"
+    },
+    {
+      "id": 14,
+      "title": "Grass Cutting Operations",
+      "client": "IvanPlants Mining",
+      "location": "Extension 14",
+      "category": "Mining",
+      "description": "Safety file for provision of grass cutting services at mining extension 14.",
+      "image": "/images/projects/mining.jpg"
+    },
+    {
+      "id": 15,
+      "title": "Salvage Yard Upgrade",
+      "client": "Anglo American",
+      "location": "Mining Site",
+      "category": "Mining",
+      "description": "Health and safety file for salvage yard upgrade project.",
+      "image": "/images/projects/mining.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Site Camp Installation",
+      "client": "Limpopo Central Hospital",
+      "location": "Limpopo",
+      "category": "Healthcare",
+      "description": "Safety file for installation of site camp at Limpopo Central Hospital.",
+      "image": "/images/projects/healthcare.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Majuba College Exam Hall and Library",
+      "client": "Majuba College",
+      "location": "KwaZulu-Natal",
+      "category": "Education",
+      "description": "Comprehensive safety file for construction of exam hall and library facilities.",
+      "image": "/images/projects/education.jpg"
+    },
+    {
+      "id": 18,
+      "title": "Mobile Crushing & Screening Plant",
+      "client": "IvanPlants Mining",
+      "location": "Mining Site",
+      "category": "Mining",
+      "description": "Safety file for operational management of mobile crushing and screening plant.",
+      "image": "/images/projects/mining.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Mogalakwena Sewer Treatment Plant Refurbishment",
+      "client": "Mogalakwena Municipality",
+      "location": "Limpopo",
+      "category": "Municipal",
+      "description": "Health and safety file for refurbishment of the Mogalakwena Sewer Treatment Plant and Rebone Maturation Ponds (Phase 1).",
+      "image": "/images/projects/municipal.jpg"
+    }
+  ],
+  "clients": [
+    {
+      "name": "City of Tshwane",
+      "sector": "Municipal",
+      "logo": "/images/clients/city-of-tshwane.png"
+    },
+    {
+      "name": "Eskom Rotec Industries",
+      "sector": "Energy",
+      "logo": "/images/clients/eskom.png"
+    },
+    {
+      "name": "PRASA",
+      "sector": "Transport",
+      "logo": "/images/clients/prasa.png"
+    },
+    {
+      "name": "VW Group South Africa",
+      "sector": "Manufacturing",
+      "logo": "/images/clients/vw.png"
+    },
+    {
+      "name": "Anglo American",
+      "sector": "Mining",
+      "logo": "/images/clients/anglo-american.png"
+    },
+    {
+      "name": "IvanPlants Mining",
+      "sector": "Mining",
+      "logo": "/images/clients/ivanplants.png"
+    },
+    {
+      "name": "Limpopo Department of Education",
+      "sector": "Government",
+      "logo": "/images/clients/limpopo-education.png"
+    },
+    {
+      "name": "Mogalakwena Municipality",
+      "sector": "Municipal",
+      "logo": "/images/clients/mogalakwena.png"
+    },
+    {
+      "name": "Limpopo Central Hospital",
+      "sector": "Healthcare",
+      "logo": "/images/clients/limpopo-hospital.png"
+    },
+    {
+      "name": "Majuba College",
+      "sector": "Education",
+      "logo": "/images/clients/majuba-college.png"
+    }
+  ],
+  "industries": [
+    {
+      "name": "Construction & Civil Engineering",
+      "icon": "building",
+      "description": "Comprehensive SHEQ services for construction projects of all sizes"
+    },
+    {
+      "name": "Municipal Infrastructure",
+      "icon": "city",
+      "description": "Safety and compliance for municipal projects and public infrastructure"
+    },
+    {
+      "name": "Mining & Resources",
+      "icon": "mountain",
+      "description": "Specialized safety management for mining operations and resource extraction"
+    },
+    {
+      "name": "Agriculture",
+      "icon": "plant",
+      "description": "Agricultural safety compliance and risk management"
+    },
+    {
+      "name": "Energy & Utilities",
+      "icon": "zap",
+      "description": "Safety services for energy generation and utility infrastructure"
+    },
+    {
+      "name": "Healthcare Facilities",
+      "icon": "hospital",
+      "description": "Health and safety compliance for healthcare construction and operations"
+    },
+    {
+      "name": "Education",
+      "icon": "school",
+      "description": "Safety management for educational facility construction and maintenance"
+    },
+    {
+      "name": "Manufacturing",
+      "icon": "factory",
+      "description": "Workplace safety and compliance for manufacturing operations"
+    }
+  ],
+  "statistics": {
+    "yearsExperience": "3+",
+    "projectsCompleted": "20+",
+    "employeesManaged": "200+",
+    "clientsSatisfied": "10+"
+  }
+}

@@ -1,0 +1,268 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import servicesData from '../data/services.json';
+
+const categories = servicesData.categories;
+const additionalServices = servicesData.additionalServices;
+---
+
+<Layout 
+  title="SHEQ Services - Safety, Health, Environment & Quality Consulting"
+  description="Comprehensive SHEQ services including safety consultation, SHERQ management, environmental compliance, and health & safety audits. OHS Act compliant solutions."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 text-white py-20">
+      <div class="container">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+              <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd" />
+            </svg>
+            Comprehensive SHEQ Solutions
+          </div>
+          <h1 class="heading-display mb-6">Our Services</h1>
+          <p class="text-lead text-neutral-200">
+            Complete Safety, Health, Environment, and Quality consulting services tailored to your industry. 
+            From risk assessments to full compliance management, we've got you covered.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Categories -->
+    {categories.map((category, index) => (
+      <section 
+        id={category.id} 
+        class={`section ${index % 2 === 0 ? 'bg-white' : 'bg-neutral-50'}`}
+      >
+        <div class="container">
+          <!-- Category Header -->
+          <div class="max-w-3xl mb-12">
+            <div class="flex items-center mb-4">
+              <div class={`w-16 h-16 rounded-lg ${
+                category.color === 'primary' ? 'bg-primary-100' :
+                category.color === 'secondary' ? 'bg-secondary-100' :
+                'bg-accent-100'
+              } flex items-center justify-center mr-4`}>
+                <svg class={`w-8 h-8 ${
+                  category.color === 'primary' ? 'text-primary-600' :
+                  category.color === 'secondary' ? 'text-secondary-600' :
+                  'text-accent-600'
+                }`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {category.icon === 'shield' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  )}
+                  {category.icon === 'heart' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  )}
+                  {category.icon === 'leaf' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  )}
+                  {category.icon === 'clipboard' && (
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  )}
+                </svg>
+              </div>
+              <div>
+                <h2 class="heading-2">{category.name}</h2>
+              </div>
+            </div>
+            <p class="text-lead">{category.description}</p>
+          </div>
+
+          <!-- Services in Category -->
+          <div class="space-y-8">
+            {category.services.map((service) => (
+              <div class="card">
+                <div class="grid md:grid-cols-3 gap-6">
+                  <div class="md:col-span-1">
+                    <h3 class="heading-3 mb-3">{service.name}</h3>
+                    <p class="text-body text-sm">{service.description}</p>
+                  </div>
+                  <div class="md:col-span-2">
+                    <h4 class="font-semibold text-neutral-900 mb-3">Key Features</h4>
+                    <ul class="grid md:grid-cols-2 gap-3">
+                      {service.features.map((feature) => (
+                        <li class="flex items-start">
+                          <svg class="w-5 h-5 text-secondary-600 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                          </svg>
+                          <span class="text-sm text-neutral-700">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    ))}
+
+    <!-- Additional Services Section -->
+    <section class="section bg-primary-50">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Additional Services</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Beyond our core SHEQ services, we offer a range of supporting solutions to ensure 
+            complete workplace safety and compliance.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {additionalServices.map((service) => (
+            <div class="bg-white rounded-lg p-6 shadow-card hover:shadow-card-hover transition-shadow">
+              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4">
+                <svg class="w-6 h-6 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-neutral-900 mb-2">{service.name}</h3>
+              <p class="text-sm text-neutral-600">{service.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Process Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Our Service Process</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            A systematic approach to ensure comprehensive SHEQ compliance and workplace safety.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              1
+            </div>
+            <h3 class="heading-3 mb-2">Assessment</h3>
+            <p class="text-body text-sm">
+              Initial consultation and comprehensive site assessment to identify risks and compliance gaps.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              2
+            </div>
+            <h3 class="heading-3 mb-2">Planning</h3>
+            <p class="text-body text-sm">
+              Develop tailored SHEQ solutions and implementation plans specific to your needs.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              3
+            </div>
+            <h3 class="heading-3 mb-2">Implementation</h3>
+            <p class="text-body text-sm">
+              Execute the plan with on-site support, training, and documentation management.
+            </p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+              4
+            </div>
+            <h3 class="heading-3 mb-2">Monitoring</h3>
+            <p class="text-body text-sm">
+              Ongoing audits, compliance checks, and continuous improvement support.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compliance Standards Section -->
+    <section class="section bg-neutral-50">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="heading-2 mb-4">Compliance Standards</h2>
+            <p class="text-lead">
+              Our services ensure full compliance with South African legislation and international best practices.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="card">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                  <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-neutral-900 mb-2">Occupational Health and Safety Act</h3>
+                  <p class="text-sm text-neutral-600 mb-2">Act 85 of 1993 and all associated Regulations</p>
+                  <ul class="text-xs text-neutral-500 space-y-1">
+                    <li>• Construction Regulations</li>
+                    <li>• General Safety Regulations</li>
+                    <li>• Environmental Regulations for Workplaces</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-secondary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                  <svg class="w-6 h-6 text-secondary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-neutral-900 mb-2">National Environmental Management Act</h3>
+                  <p class="text-sm text-neutral-600 mb-2">NEMA and related environmental legislation</p>
+                  <ul class="text-xs text-neutral-500 space-y-1">
+                    <li>• Waste Management</li>
+                    <li>• Air Quality Management</li>
+                    <li>• Hazardous Substances</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary-600 text-white">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="heading-2 mb-4">Ready to Implement Comprehensive SHEQ Solutions?</h2>
+          <p class="text-lead mb-8 text-primary-100">
+            Let our experts assess your needs and develop a tailored SHEQ program for your organization. 
+            Get started with a free consultation.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" variant="accent" size="lg">
+              Request Consultation
+            </Button>
+            <Button href="/projects" variant="outline" size="lg" class="!border-white !text-white hover:!bg-white hover:!text-primary-600">
+              View Our Projects
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

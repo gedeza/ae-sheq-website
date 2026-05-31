@@ -1,0 +1,120 @@
+---
+import contactData from '../data/contact.json';
+
+const currentPath = Astro.url.pathname;
+
+const navItems = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Services', href: '/services' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Credentials', href: '/credentials' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8" aria-label="Main navigation">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="flex items-center group">
+          <img 
+            src="/logo/AE_SHEQ_LOGO.PNG" 
+            alt="AE SHEQ Consulting - Safety, Health, Environment, Quality" 
+            class="h-12 w-auto transition-opacity group-hover:opacity-90"
+          />
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex md:items-center md:space-x-1">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+              currentPath === item.href
+                ? 'bg-primary-50 text-primary-700'
+                : 'text-neutral-700 hover:bg-neutral-100 hover:text-primary-600'
+            }`}
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            {item.name}
+          </a>
+        ))}
+      </div>
+
+      <!-- CTA Button (Desktop) -->
+      <div class="hidden md:flex md:items-center">
+        <a href="/contact" class="btn btn-primary">
+          Get Consultation
+        </a>
+      </div>
+
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button
+          type="button"
+          class="inline-flex items-center justify-center p-2 rounded-lg text-neutral-700 hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          id="mobile-menu-button"
+        >
+          <span class="sr-only">Open main menu</span>
+          <!-- Hamburger icon -->
+          <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <!-- Close icon (hidden by default) -->
+          <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div class="hidden md:hidden" id="mobile-menu">
+      <div class="px-2 pt-2 pb-3 space-y-1">
+        {navItems.map((item) => (
+          <a
+            href={item.href}
+            class={`block px-3 py-2 rounded-lg text-base font-medium ${
+              currentPath === item.href
+                ? 'bg-primary-50 text-primary-700'
+                : 'text-neutral-700 hover:bg-neutral-100 hover:text-primary-600'
+            }`}
+            aria-current={currentPath === item.href ? 'page' : undefined}
+          >
+            {item.name}
+          </a>
+        ))}
+        <a href="/contact" class="block w-full mt-4">
+          <span class="btn btn-primary w-full text-center">
+            Get Consultation
+          </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+      mobileMenu.classList.toggle('hidden');
+      
+      // Toggle icons
+      const hamburgerIcon = mobileMenuButton.querySelector('svg:first-of-type');
+      const closeIcon = mobileMenuButton.querySelector('svg:last-of-type');
+      hamburgerIcon?.classList.toggle('hidden');
+      closeIcon?.classList.toggle('hidden');
+    });
+  }
+</script>

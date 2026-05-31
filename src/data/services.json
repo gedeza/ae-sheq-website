@@ -1,0 +1,174 @@
+{
+  "categories": [
+    {
+      "id": "safety",
+      "name": "Safety Services",
+      "icon": "shield",
+      "color": "primary",
+      "description": "Comprehensive safety consultation and management services to ensure workplace compliance and protect your workforce.",
+      "services": [
+        {
+          "id": "safety-consultation",
+          "name": "Safety Consultation & Site Inspection",
+          "description": "Our safety consultants conduct thorough site inspections and baseline risk assessments to identify and address potential hazards in your workplace.",
+          "features": [
+            "On-site consultation services",
+            "Hazard identification and mitigation",
+            "Safety and health program establishment",
+            "Construction site establishment",
+            "Compliance with Construction Requirements/Regulations"
+          ]
+        },
+        {
+          "id": "sherq-management",
+          "name": "SHERQ Management Systems",
+          "description": "Implementation of comprehensive SHERQ systems to improve, protect and sustain the health and safety of all people on your premises.",
+          "features": [
+            "SHE Roll-Out Plan implementation",
+            "Safety standards development",
+            "Construction site safety management",
+            "SHE plans and emergency preparedness",
+            "Safe work procedures and risk assessments",
+            "On-site workshops and training",
+            "Employee annual safety inductions"
+          ]
+        },
+        {
+          "id": "safety-files",
+          "name": "Project Health and Safety Files",
+          "description": "Professional management of your safety files with nationwide workshops to ensure OHS Act compliance and protect against criminal liability.",
+          "features": [
+            "Safety file preparation and management",
+            "Safety file workshops across South Africa",
+            "Employee injury prevention training",
+            "Good safety practice implementation",
+            "Criminal liability protection",
+            "OHS Act compliance documentation"
+          ]
+        },
+        {
+          "id": "safety-officers",
+          "name": "Safety Officer Placement",
+          "description": "Experienced safety specialists placed on-site to manage day-to-day safety activities and maintain comprehensive documentation.",
+          "features": [
+            "On-site safety specialist placement",
+            "Day-to-day safety activities management",
+            "Employee safety inductions and DSTIs",
+            "PPE monitoring and compliance",
+            "Accident and incident investigation",
+            "Incident report writing",
+            "Toolbox talks and training",
+            "Safety file updates and maintenance"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "health",
+      "name": "Health Services",
+      "icon": "heart",
+      "color": "secondary",
+      "description": "Occupational health services to protect employee wellbeing and ensure regulatory compliance.",
+      "services": [
+        {
+          "id": "occupational-health",
+          "name": "Occupational Health Programs",
+          "description": "Comprehensive health programs designed to protect and improve employee health in the workplace.",
+          "features": [
+            "Occupational health compliance",
+            "Employee health and safety programs",
+            "Health risk assessments",
+            "Integration with safety systems",
+            "Workplace health monitoring"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Environmental Services",
+      "icon": "leaf",
+      "color": "secondary",
+      "description": "Environmental compliance and sustainability services to help your business meet regulatory requirements and protect the planet.",
+      "services": [
+        {
+          "id": "environmental-compliance",
+          "name": "Environmental Compliance",
+          "description": "Extensive experience helping businesses meet regulatory requirements and adopt sustainability best practices.",
+          "features": [
+            "Regulatory compliance assistance",
+            "Sustainability best practices",
+            "Risk reduction and penalty prevention",
+            "Environmental safeguarding",
+            "NEMA (National Environmental Management Act) compliance",
+            "Hazardous substance management"
+          ]
+        },
+        {
+          "id": "environmental-audits",
+          "name": "Environmental Audits",
+          "description": "Comprehensive environmental assessments to ensure compliance and identify improvement opportunities.",
+          "features": [
+            "Environmental impact assessments",
+            "Waste management and reduction",
+            "Air quality and emission monitoring",
+            "NEMA compliance audits",
+            "Hazardous substance audits"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "quality-auditing",
+      "name": "Quality & Auditing Services",
+      "icon": "clipboard",
+      "color": "accent",
+      "description": "Systematic evaluations of workplace systems to ensure compliance, mitigate risks, and foster a culture of safety.",
+      "services": [
+        {
+          "id": "health-safety-audits",
+          "name": "Health and Safety Audits",
+          "description": "Comprehensive audits to improve operations and safety culture through systematic evaluation of workplace systems.",
+          "features": [
+            "Compliance Audit (First Party Audit)",
+            "Management Safety Audit",
+            "Risk Assessment Audit",
+            "Process Safety Audit",
+            "Environmental Audit",
+            "Construction Audit",
+            "Behavioral Safety Audit"
+          ]
+        },
+        {
+          "id": "quality-management",
+          "name": "Quality Management",
+          "description": "Quality system implementation and continuous improvement processes to ensure excellence.",
+          "features": [
+            "Quality system implementation",
+            "Continuous improvement processes",
+            "Compliance verification",
+            "Best practice consultancy"
+          ]
+        }
+      ]
+    }
+  ],
+  "additionalServices": [
+    {
+      "name": "PPE & Safety Equipment Supply",
+      "description": "Supply of personal protective equipment, safety signs, and other safety materials."
+    },
+    {
+      "name": "Risk Assessments",
+      "description": "Comprehensive risk assessments and safe work procedures/method statement drafting."
+    },
+    {
+      "name": "Site Establishment",
+      "description": "Construction site establishment and compliance management."
+    },
+    {
+      "name": "Site Audits",
+      "description": "Regular site audits to ensure ongoing compliance and safety."
+    }
+  ]
+}

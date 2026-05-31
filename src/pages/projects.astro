@@ -1,0 +1,290 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import projectsData from '../data/projects.json';
+
+const featured = projectsData.featured;
+const completed = projectsData.completed;
+const safetyFiles = projectsData.safetyFiles;
+const clients = projectsData.clients;
+const industries = projectsData.industries;
+const stats = projectsData.statistics;
+---
+
+<Layout 
+  title="Projects & Portfolio - AE SHEQ Consulting Success Stories"
+  description="Explore AE SHEQ Consulting's portfolio of successful projects across construction, mining, municipal, and manufacturing sectors. 20+ completed projects with major clients."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 text-white py-20">
+      <div class="container">
+        <div class="max-w-3xl">
+          <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
+            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd" />
+              <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+            </svg>
+            Our Portfolio
+          </div>
+          <h1 class="heading-display mb-6">Projects & Success Stories</h1>
+          <p class="text-lead text-neutral-200">
+            Delivering excellence across diverse industries. From major infrastructure projects to 
+            comprehensive safety file development, we've helped organizations achieve full SHEQ compliance.
+          </p>
+        </div>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-12 pt-12 border-t border-white/20">
+          <div class="text-center">
+            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.yearsExperience}</div>
+            <div class="text-sm text-neutral-300">Years Experience</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.projectsCompleted}</div>
+            <div class="text-sm text-neutral-300">Projects Completed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.employeesManaged}</div>
+            <div class="text-sm text-neutral-300">Employees Managed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.clientsSatisfied}</div>
+            <div class="text-sm text-neutral-300">Satisfied Clients</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured/Current Projects -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Current Projects</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Our ongoing projects demonstrate our commitment to long-term client relationships 
+            and continuous safety management.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          {featured.map((project) => (
+            <ProjectCard
+              title={project.title}
+              client={project.client}
+              location={project.location}
+              category={project.category}
+              description={project.description}
+              image={project.image}
+              status={project.status}
+              scope={project.scope}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Completed Projects -->
+    <section class="section bg-neutral-50">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Completed Projects</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Successfully delivered projects across infrastructure, construction, and municipal sectors.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {completed.map((project) => (
+            <ProjectCard
+              title={project.title}
+              client={project.client}
+              location={project.location}
+              category={project.category}
+              description={project.description}
+              image={project.image}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Safety Files Developed -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Safety Files Developed</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Comprehensive health and safety file preparation for diverse projects, 
+            ensuring OHS Act compliance and protecting against criminal liability.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {safetyFiles.map((project) => (
+            <ProjectCard
+              title={project.title}
+              client={project.client}
+              location={project.location}
+              category={project.category}
+              description={project.description}
+              image={project.image}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Served -->
+    <section class="section bg-primary-50">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Industries We Serve</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Specialized SHEQ expertise across multiple sectors, tailored to each industry's unique challenges.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {industries.map((industry) => (
+            <div class="bg-white rounded-lg p-6 shadow-card hover:shadow-card-hover transition-all duration-300 group">
+              <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-600 transition-colors">
+                <svg class="w-6 h-6 text-primary-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-neutral-900 mb-2">{industry.name}</h3>
+              <p class="text-sm text-neutral-600">{industry.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Trusted by Leading Organizations</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            We're proud to partner with major clients across South Africa.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {clients.map((client) => (
+            <div class="flex flex-col items-center justify-center p-6 bg-neutral-50 rounded-lg hover:bg-primary-50 transition-colors group">
+              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-3 shadow-sm group-hover:shadow-md transition-shadow">
+                <svg class="w-8 h-8 text-neutral-400 group-hover:text-primary-600 transition-colors" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <p class="text-sm font-semibold text-neutral-900 text-center">{client.name}</p>
+              <p class="text-xs text-neutral-500 mt-1">{client.sector}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Approach -->
+    <section class="section bg-neutral-50">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12">
+            <h2 class="heading-2 mb-4">Our Project Approach</h2>
+            <p class="text-lead">
+              A proven methodology ensuring successful project delivery and lasting client satisfaction.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="card">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                  <span class="text-xl font-bold text-primary-600">1</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-neutral-900 mb-2">Initial Consultation</h3>
+                  <p class="text-sm text-neutral-600">
+                    Comprehensive assessment of project requirements, risks, and compliance needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                  <span class="text-xl font-bold text-primary-600">2</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-neutral-900 mb-2">Tailored Solutions</h3>
+                  <p class="text-sm text-neutral-600">
+                    Development of customized SHEQ programs specific to your project and industry.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                  <span class="text-xl font-bold text-primary-600">3</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-neutral-900 mb-2">On-Site Implementation</h3>
+                  <p class="text-sm text-neutral-600">
+                    Dedicated safety officers and specialists managing day-to-day operations.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="flex items-start">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                  <span class="text-xl font-bold text-primary-600">4</span>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-neutral-900 mb-2">Continuous Support</h3>
+                  <p class="text-sm text-neutral-600">
+                    Ongoing monitoring, audits, and support throughout the project lifecycle.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary-600 text-white">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="heading-2 mb-4">Start Your Next Project With Confidence</h2>
+          <p class="text-lead mb-8 text-primary-100">
+            Whether it's a major infrastructure project or comprehensive safety file development, 
+            our experienced team is ready to ensure your success.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" variant="accent" size="lg">
+              Discuss Your Project
+            </Button>
+            <Button href="/services" variant="outline" size="lg" class="!border-white !text-white hover:!bg-white hover:!text-primary-600">
+              View Our Services
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

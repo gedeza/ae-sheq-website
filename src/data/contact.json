@@ -1,0 +1,30 @@
+{
+  "company": {
+    "name": "AE SHEQ Consulting (Pty) Ltd",
+    "registration": "2020/574070/07",
+    "tagline": "Leading SHEQ Solutions for a Safer, Compliant Workplace"
+  },
+  "address": {
+    "street": "1136 Morula Street",
+    "area": "Mahwelereng",
+    "city": "Mokopane",
+    "province": "Limpopo",
+    "country": "South Africa"
+  },
+  "contact": {
+    "phone": "+27 60 644 5032",
+    "email": "info@aesheq.co.za",
+    "alternativeEmail": "simon@aesheq.co.za",
+    "website": "www.aesheq.co.za"
+  },
+  "businessHours": {
+    "weekdays": "Monday - Friday: 8:00 AM - 5:00 PM",
+    "weekend": "Closed",
+    "note": "Emergency consultations available by appointment"
+  },
+  "socialMedia": {
+    "linkedin": "",
+    "facebook": "",
+    "twitter": ""
+  }
+}

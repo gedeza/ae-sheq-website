@@ -1,0 +1,290 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import TeamMember from '../components/TeamMember.astro';
+import teamData from '../data/team.json';
+import contactData from '../data/contact.json';
+
+const professionalBodies = [
+  {
+    name: 'SAIOSH',
+    full: 'South African Institute of Occupational Safety and Health',
+    description: 'Professional body for occupational safety and health practitioners'
+  },
+  {
+    name: 'SACPCMP',
+    full: 'South African Council for the Project and Construction Management Professions',
+    description: 'Regulatory body for construction management professionals'
+  },
+  {
+    name: 'SAIOH',
+    full: 'South African Institute of Occupational Hygiene',
+    description: 'Professional body for occupational hygiene practitioners'
+  },
+  {
+    name: 'ACPM',
+    full: 'Association for Construction Project Management',
+    description: 'Professional association for construction project managers'
+  },
+  {
+    name: 'HPCSA',
+    full: 'Health Professions Council of South Africa',
+    description: 'Regulatory body for health professionals'
+  }
+];
+
+const industries = [
+  'Construction & Civil Engineering',
+  'Municipal Infrastructure',
+  'Mining & Resources',
+  'Agriculture',
+  'Energy & Utilities',
+  'Healthcare Facilities',
+  'Education',
+  'Manufacturing'
+];
+---
+
+<Layout 
+  title="About AE SHEQ Consulting - Our Team & Mission"
+  description="Learn about AE SHEQ Consulting's mission, experienced team, and commitment to providing reliable SHEQ solutions. Over 3 years of expertise with registered professionals."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-900 via-primary-800 to-neutral-900 text-white py-20">
+      <div class="container">
+        <div class="max-w-3xl">
+          <h1 class="heading-display mb-6">About AE SHEQ Consulting</h1>
+          <p class="text-lead text-neutral-200">
+            Founded over three years ago with a mission to become a leader in the SHEQ industry 
+            by providing reliable and sustainable solutions to our clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <div class="inline-flex items-center px-4 py-2 bg-primary-50 rounded-full text-sm font-semibold text-primary-700 mb-6">
+              <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+              </svg>
+              Our Mission & Vision
+            </div>
+            <h2 class="heading-2 mb-6">Leading the Way in SHEQ Excellence</h2>
+            <div class="prose prose-lg">
+              <p class="text-body mb-4">
+                <strong>Our Mission:</strong> To become a leader in safety, health, environmental and quality 
+                industry by providing reliable and sustainable SHERQ solutions to our clients and overall 
+                compliance with the Occupational Health and Safety Act 85 of 1993 and Regulations.
+              </p>
+              <p class="text-body">
+                Our commitment extends beyond compliance. We strive to deliver exceptional customer service, 
+                ensuring a seamless experience while helping businesses create safer, healthier work environments.
+              </p>
+            </div>
+          </div>
+          <div class="bg-primary-50 rounded-2xl p-8">
+            <h3 class="heading-3 mb-6 text-primary-900">Core Values</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-secondary-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-neutral-900 mb-1">Reliability</h4>
+                  <p class="text-sm text-neutral-600">Consistent, dependable SHEQ solutions you can trust</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-secondary-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-neutral-900 mb-1">Sustainability</h4>
+                  <p class="text-sm text-neutral-600">Long-term solutions that protect people and planet</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-secondary-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-neutral-900 mb-1">Compliance</h4>
+                  <p class="text-sm text-neutral-600">Full adherence to OHS Act and all regulations</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-secondary-600 mr-3 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                </svg>
+                <div>
+                  <h4 class="font-semibold text-neutral-900 mb-1">Excellence</h4>
+                  <p class="text-sm text-neutral-600">Exceptional customer service and expert guidance</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Company History Section -->
+    <section class="section bg-neutral-50">
+      <div class="container">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="heading-2 mb-8 text-center">Our Journey</h2>
+          <div class="bg-white rounded-2xl p-8 md:p-12 shadow-card">
+            <div class="prose prose-lg max-w-none">
+              <p class="text-body mb-4">
+                Founded over three years ago, AE SHEQ Consulting began as a small enterprise dedicated to 
+                providing occupational health and safety services to help businesses comply with relevant legislation.
+              </p>
+              <p class="text-body mb-4">
+                Recognizing the challenges that companies face daily in managing occupational health and safety, 
+                we sought to deliver tailored solutions to address these concerns. Over time, our company has 
+                expanded its offerings to include a comprehensive range of services aligned with the Occupational 
+                Health and Safety Act and Regulations.
+              </p>
+              <p class="text-body mb-6">
+                Today, we provide holistic and integrated risk management, engineering and safety services to 
+                construction, administrative office spaces, and civil engineering sectors. We assist companies 
+                to reduce health and safety risk in the working environment, as well as providing best practice 
+                consultancy to manage the process internally more efficiently.
+              </p>
+              
+              <div class="bg-primary-50 rounded-lg p-6 border-l-4 border-primary-600">
+                <h3 class="heading-3 mb-4 text-primary-900">What We Do</h3>
+                <p class="text-body">
+                  We provide holistic and integrated risk management, engineering and safety services across 
+                  multiple sectors. Our expertise helps companies reduce health and safety risks while providing 
+                  best practice consultancy for efficient internal management.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Served Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Industries We Serve</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Our expertise spans across diverse sectors, providing specialized SHEQ solutions 
+            tailored to each industry's unique challenges.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {industries.map((industry) => (
+            <div class="bg-neutral-50 rounded-lg p-6 text-center hover:bg-primary-50 hover:shadow-md transition-all duration-300">
+              <p class="font-semibold text-neutral-900">{industry}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section bg-neutral-50">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Meet Our Expert Team</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Our team of registered professionals brings extensive experience and qualifications 
+            to ensure your workplace safety and compliance.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {teamData.map((member) => (
+            <TeamMember
+              name={member.name}
+              role={member.role}
+              image={member.image}
+              qualifications={member.qualifications}
+              registrations={member.registrations}
+              experience={member.experience}
+              email={member.email}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Affiliations Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Professional Affiliations</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Our company and team members are registered with leading professional bodies, 
+            ensuring the highest standards of practice and ethics.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {professionalBodies.map((body) => (
+            <div class="card">
+              <div class="flex items-start space-x-4">
+                <div class="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <svg class="w-6 h-6 text-primary-600" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 class="font-bold text-neutral-900 mb-1">{body.name}</h3>
+                  <p class="text-sm text-neutral-600 mb-2">{body.full}</p>
+                  <p class="text-xs text-neutral-500">{body.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 text-center">
+          <div class="inline-flex items-center px-6 py-3 bg-secondary-50 rounded-lg">
+            <svg class="w-6 h-6 text-secondary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            <span class="font-semibold text-neutral-900">
+              All team members hold current professional registrations and certifications
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary-600 text-white">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="heading-2 mb-4">Work With Experienced SHEQ Professionals</h2>
+          <p class="text-lead mb-8 text-primary-100">
+            Partner with our registered experts to ensure your workplace safety and compliance. 
+            Get started with a free consultation today.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" variant="accent" size="lg">
+              Get Free Consultation
+            </Button>
+            <Button href="/services" variant="outline" size="lg" class="!border-white !text-white hover:!bg-white hover:!text-primary-600">
+              View Our Services
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>

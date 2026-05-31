@@ -1,0 +1,93 @@
+[
+  {
+    "id": 1,
+    "name": "Mr. Simon Moletsane",
+    "role": "Safety Specialist / Environmental Health & Safety Specialist",
+    "image": "/images/team/simon-moletsane.jpg",
+    "qualifications": [
+      "Diploma in Safety Management",
+      "Advanced Diploma in Safety Management",
+      "Engineering & Construction Risk and Project Management"
+    ],
+    "registrations": [
+      "SAIOSH (South African Institute of Occupational Safety and Health) Registered",
+      "Former Executive member of SHEQ Vaal University of Technology"
+    ],
+    "experience": [
+      "Coal mining industry",
+      "Engineering Operational",
+      "Agriculture Chemical Company",
+      "Construction Projects"
+    ],
+    "email": "simon@aesheq.co.za"
+  },
+  {
+    "id": 2,
+    "name": "Ms. Gontse Langa",
+    "role": "Environmental Health Practitioner",
+    "image": "/images/team/gontse-langa.jpg",
+    "qualifications": [
+      "Basic First Aid training",
+      "Basic Fire Fighter training",
+      "SHE Representative",
+      "Legal Knowledge for Occupational Hygiene Short Course – University of Northwest",
+      "General Safety, Health and Environment Short Training course"
+    ],
+    "registrations": [
+      "HPCSA (Health Professions Council of South Africa) – Independent Environmental Health Practitioner",
+      "SAIOH (South African Institute of Occupational Hygiene) – Registered Occupational Hygiene Assistant"
+    ],
+    "experience": [
+      "Environmental health compliance",
+      "Occupational hygiene",
+      "Health and safety programs"
+    ],
+    "email": "info@aesheq.co.za"
+  },
+  {
+    "id": 3,
+    "name": "Ms. Mangale Cynthia Machethe",
+    "role": "Construction Health and Safety Officer",
+    "image": "/images/team/cynthia-machethe.jpg",
+    "qualifications": [
+      "Introduction to SAMTRAC and Full SAMTRAC",
+      "Higher Certificate in Economics & Management Science UNISA",
+      "Incident Investigation Level 3",
+      "Basic Firefighter",
+      "First Aider Level 1"
+    ],
+    "registrations": [
+      "SACPCMP (South African Council for the Project and Construction Management Professions) Registered"
+    ],
+    "experience": [
+      "Construction site safety management",
+      "Project management",
+      "Incident investigation",
+      "Safety compliance"
+    ],
+    "email": "info@aesheq.co.za"
+  },
+  {
+    "id": 4,
+    "name": "Ms. Khensani Kekana",
+    "role": "Health and Safety Officer",
+    "image": "/images/team/khensani-kekana.jpg",
+    "qualifications": [
+      "National Diploma in Safety Management",
+      "Practical Safety File (Develop and Implementation)",
+      "First aid Level 1 Basic",
+      "Fire Fighter"
+    ],
+    "registrations": [
+      "SAIOSH (South African Institute of Occupational Safety and Health) Registered",
+      "Candidate SACPCMP (South African Council for the Project and Construction Management Professions) Registered"
+    ],
+    "experience": [
+      "Safety file development and implementation",
+      "Health and safety compliance",
+      "Emergency response",
+      "Safety training"
+    ],
+    "email": "info@aesheq.co.za"
+  }
+]

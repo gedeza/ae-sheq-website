@@ -1,0 +1,225 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/Button.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import contactData from '../data/contact.json';
+import servicesData from '../data/services.json';
+import projectsData from '../data/projects.json';
+
+const featuredServices = servicesData.categories.slice(0, 4);
+const stats = projectsData.statistics;
+const featuredClients = projectsData.clients.slice(0, 6);
+---
+
+<Layout 
+  title="AE SHEQ Consulting - Leading SHEQ Solutions in South Africa"
+  description="Professional Safety, Health, Environment & Quality consulting services. OHS Act compliance, risk management, and SHEQ solutions across South Africa. Over 3 years of expertise."
+>
+  <Header />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-hero text-white overflow-hidden">
+      <!-- Background Pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+      </div>
+
+      <div class="container relative py-20 md:py-32">
+        <div class="max-w-4xl mx-auto text-center">
+          <!-- Badge -->
+          <div class="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6 animate-fade-in">
+            <svg class="w-5 h-5 mr-2 text-secondary-400" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+            </svg>
+            OHS Act 85 of 1993 Compliant
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="heading-display mb-6 animate-slide-up">
+            Leading SHEQ Solutions for a <span class="text-secondary-400">Safer, Compliant</span> Workplace
+          </h1>
+
+          <!-- Subheading -->
+          <p class="text-lead mb-8 text-neutral-200 max-w-3xl mx-auto animate-slide-up">
+            Over 3 years of expertise in Safety, Health, Environment & Quality consulting. 
+            Providing reliable and sustainable SHEQ solutions across South Africa.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
+            <Button href="/contact" variant="accent" size="lg">
+              Get Free Consultation
+            </Button>
+            <Button href="/services" variant="outline" size="lg" class="!border-white !text-white hover:!bg-white hover:!text-primary-900">
+              View Our Services
+            </Button>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 pt-16 border-t border-white/20">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.yearsExperience}</div>
+              <div class="text-sm text-neutral-300">Years Experience</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.projectsCompleted}</div>
+              <div class="text-sm text-neutral-300">Projects Completed</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.employeesManaged}</div>
+              <div class="text-sm text-neutral-300">Employees Managed</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-secondary-400 mb-2">{stats.clientsSatisfied}</div>
+              <div class="text-sm text-neutral-300">Satisfied Clients</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center mb-16">
+          <h2 class="heading-2 mb-4">Holistic Risk Management & Safety Services</h2>
+          <p class="text-lead">
+            We provide integrated risk management, engineering and safety services to construction, 
+            administrative office spaces, and civil engineering sectors. Our mission is to help companies 
+            reduce health and safety risks while providing best practice consultancy for efficient internal management.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Feature 1 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+            </div>
+            <h3 class="heading-3 mb-2">Comprehensive Compliance</h3>
+            <p class="text-body">
+              Full compliance with OHS Act 85 of 1993 and Regulations, NEMA, and all relevant safety legislation.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-secondary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+            </div>
+            <h3 class="heading-3 mb-2">Experienced Team</h3>
+            <p class="text-body">
+              Registered professionals with SAIOSH, SACPCMP, SAIOH, and ACPM. Proven expertise across multiple industries.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="text-center">
+            <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
+            <h3 class="heading-3 mb-2">Proven Track Record</h3>
+            <p class="text-body">
+              Successfully delivered 20+ projects for major clients including City of Tshwane, Eskom, and Anglo American.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section class="section bg-neutral-50">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Our SHEQ Services</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            Comprehensive solutions across all four pillars of SHEQ: Safety, Health, Environment, and Quality.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {featuredServices.map((service) => (
+            <ServiceCard
+              title={service.name}
+              description={service.description}
+              icon={service.icon}
+              color={service.color as 'primary' | 'secondary' | 'accent'}
+              href="/services"
+            />
+          ))}
+        </div>
+
+        <div class="text-center mt-12">
+          <Button href="/services" variant="primary" size="lg">
+            View All Services
+          </Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Clients Section -->
+    <section class="section bg-white">
+      <div class="container">
+        <div class="text-center mb-12">
+          <h2 class="heading-2 mb-4">Trusted by Leading Organizations</h2>
+          <p class="text-lead max-w-2xl mx-auto">
+            We've partnered with major clients across construction, mining, municipal, and manufacturing sectors.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+          {featuredClients.map((client) => (
+            <div class="flex items-center justify-center p-4 grayscale hover:grayscale-0 transition-all duration-300">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-neutral-100 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <svg class="w-8 h-8 text-neutral-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <p class="text-xs font-semibold text-neutral-600">{client.name}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center mt-12">
+          <Button href="/projects" variant="outline">
+            View All Projects
+          </Button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section bg-primary-600 text-white">
+      <div class="container">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="heading-2 mb-4">Ready to Ensure Your Workplace Compliance?</h2>
+          <p class="text-lead mb-8 text-primary-100">
+            Get a free consultation with our SHEQ experts. We'll help you identify risks, 
+            ensure compliance, and create a safer work environment.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" variant="accent" size="lg">
+              Get Free Consultation
+            </Button>
+            <Button href={`tel:${contactData.contact.phone}`} variant="outline" size="lg" class="!border-white !text-white hover:!bg-white hover:!text-primary-600">
+              Call {contactData.contact.phone}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
